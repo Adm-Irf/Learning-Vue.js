@@ -1,11 +1,27 @@
 // First Step always declare Vue apps
 const app = Vue.createApp({
-    // It has to be 'data'
+    // It has to be 'data'(reserved), not a function
     data: function() {
         // Return an object
         return {
-            courseGoal: 'Finish the course and learn Vue!'
+            courseGoal : 'First Goals',
+            courseGoalA: 'Finish the course and learn Vue!',
+            courseGoalB: '<h2>Master Vue aand build amazing Apps!</h2>',
+            vueLink: 'https://vuejs.org/',
         };
+    },
+    // Method help to create function(to call)
+    methods: {
+        outputGoal() {
+            const randomNumber = Math.random();
+            // this. can use to refer (point) to the data, cannot call direct
+            if (randomNumber < 0.5) {
+                return this.courseGoalA
+            }
+            else {
+                return this.courseGoalB
+            }
+        }
     }
 });
 
