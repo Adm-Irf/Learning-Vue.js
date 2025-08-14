@@ -1,9 +1,14 @@
 const app = Vue.createApp({
   data() {
-    return { goals: ['Finished'] };
+    return { 
+      goals: [],
+      enteredGoalValue: '',
+    }
   },
   methods: {
-
+    addGoals() {
+      this.goals.push(this.enteredGoalValue);
+    }
   }
 });
 
