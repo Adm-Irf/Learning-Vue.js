@@ -23,7 +23,7 @@
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
       <!-- v-else must be use after an element of v-if (compulsory)-->
       <ul v-else>
-        <li>Goal</li>
+        <li v-for="goal in goals">{{ goal }}</li>
       </ul>
     </section>
   </body>

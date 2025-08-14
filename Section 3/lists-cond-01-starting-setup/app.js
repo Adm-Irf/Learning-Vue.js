@@ -13,3 +13,7 @@ const app = Vue.createApp({
 });
 
 app.mount('#user-goals');
+
+// v-if for if statement
+// v-else-if for else if statement
+// v-for is 'for' statement
